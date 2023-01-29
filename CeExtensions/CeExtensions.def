@@ -1,0 +1,8 @@
+﻿; CeExtensions.def: 声明 DLL 的模块参数。
+
+LIBRARY
+
+EXPORTS
+	CEPlugin_GetVersion	@1
+    CEPlugin_InitializePlugin @2
+    CEPlugin_DisablePlugin @3
