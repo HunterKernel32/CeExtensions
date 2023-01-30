@@ -53,13 +53,13 @@ BOOL __stdcall CEPlugin_GetVersion(PPluginVersion pv, int sizeofpluginversion)
 }
 
 
-
+ExportedFunctions CEP_Exported;
 BOOL __stdcall CEPlugin_InitializePlugin(PExportedFunctions ef, int pluginid)
 {
 	static int selfid = pluginid;
-	static ExportedFunctions Exported = *ef;
+	CEP_Exported = *ef;
 
-	if (Exported.sizeofExportedFunctions != sizeof(ExportedFunctions))
+	if (CEP_Exported.sizeofExportedFunctions != sizeof(ExportedFunctions))
 	{
 		OutputDebugStringA("Exported.sizeofExportedFunctions != sizeof(ExportedFunctions)");
 		return FALSE;
