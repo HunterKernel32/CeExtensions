@@ -98,11 +98,11 @@ void CListBoxEx::OnRButtonUp(UINT nFlags, CPoint point)
 }
 
 
-//枚举模块
+//枚举模块路劲
 void MainDialog::OnMenuButton1()
 {
 	HANDLE hProcess = NULL;
-	HMODULE ModuleList[100] = { 0 };
+	HMODULE ModuleList[250] = { 0 };
 	CHAR ModulePath[MAX_PATH] = { 0 };
 
 	if (GetProcessId(*CEP_Exported.OpenedProcessHandle))
